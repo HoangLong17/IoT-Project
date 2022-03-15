@@ -1,0 +1,357 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+        <meta name="description" content="" />
+        <meta name="author" content="" />
+        <title>IOT-CLIENT</title>
+        
+        <!-- Core theme CSS (includes Bootstrap)-->
+        <link href="/static/styles.css" rel="stylesheet" />
+        <style>
+        .snip1457 {
+  font-family: 'Raleway', Arial, sans-serif;
+  border: none;
+  background-color: #5666a5;
+  border-radius: 5px;
+  color: #ffffff;
+  cursor: pointer;
+  padding: 0px 25px;
+  display: inline-block;
+  margin: 5px 5px;
+  text-transform: uppercase;
+  line-height: 46px;
+  font-weight: 400;
+  font-size: 1em;
+  outline: none;
+  position: relative;
+  overflow: hidden;
+  font-size: 16px;
+  border-radius: 23px;
+  width:130px;
+  
+  -webkit-transition: all 0.35s ease;
+  transition: all 0.35s ease;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+.snip1457:before {
+  opacity: 0;
+  content: "";
+  position: absolute;
+  top: 0px;
+  bottom: 0px;
+  left: 0px;
+  right: 0px;
+  border-radius: inherit;
+  background-color: #ffffff;
+  -webkit-transition: all 0.3s;
+  transition: all 0.3s;
+  -webkit-transform: translateY(100%);
+  transform: translateY(100%);
+}
+.snip1457:after {
+  position: absolute;
+  top: 0px;
+  bottom: 0px;
+  left: 0px;
+  right: 0px;
+  border: 5px solid #5666a5;
+  content: '';
+  border-radius: inherit;
+}
+.snip1457:hover,
+.snip1457.hover {
+  background-color: #5666a5;
+  color: #ffffff;
+}
+.snip1457:hover:before,
+.snip1457.hover:before {
+  -webkit-transform: translateY(0%);
+  transform: translateY(0%);
+  opacity: 0.25;
+}
+            .dropdown {
+    -moz-border-bottom-colors: none;
+    -moz-border-left-colors: none;
+    -moz-border-right-colors: none;
+    -moz-border-top-colors: none;
+    background: linear-gradient(to bottom, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.06)) repeat scroll 0 0 #F2F2F2;
+    border-color: #FFFFFF #F7F7F7 #F5F5F5;
+    border-image: none;
+    border-radius: 3px;
+    border-style: solid;
+    border-width: 1px;
+    box-shadow: 0 1px 1px rgba(0, 0, 0, 0.08);
+    display: inline-block;
+    height: 38px;
+    overflow: hidden;
+    position: relative;
+    width: 380px;
+}
+.dropdown:before, .dropdown:after {
+    -moz-border-bottom-colors: none;
+    -moz-border-left-colors: none;
+    -moz-border-right-colors: none;
+    -moz-border-top-colors: none;
+    border-color: #888888 rgba(0, 0, 0, 0);
+    border-image: none;
+    border-style: dashed;
+    border-width: 4px;
+    content: "";
+    height: 0;
+    pointer-events: none;
+    position: absolute;
+    right: 10px;
+    top: 9px;
+    width: 0;
+    z-index: 2;
+}
+.dropdown:before {
+    border-bottom-style: solid;
+    border-top: medium none;
+}
+.dropdown:after {
+    border-bottom: medium none;
+    border-top-style: solid;
+    margin-top: 7px;
+}
+.dropdown-select {
+    background: none repeat scroll 0 0 rgba(0, 0, 0, 0) !important;
+    border: 0 none;
+    border-radius: 0;
+    color: #62717A;
+    font-size: 15px;
+    height: 32px;
+    line-height: 16px;
+    margin: 0;
+    padding: 6px 8px 6px 10px;
+    position: relative;
+    text-shadow: 0 1px #FFFFFF;
+    width: 130%;
+}
+.dropdown-select:focus {
+    color: #394349;
+    outline: 2px solid #49AFF2;
+    outline-offset: -2px;
+    width: 100%;
+    z-index: 3;
+}
+.dropdown-select > option {
+    background: none repeat scroll 0 0 #F2F2F2;
+    border-radius: 3px;
+    cursor: pointer;
+    margin: 3px;
+    padding: 6px 8px;
+    text-shadow: none;
+}
+.dropdown-dark {
+    background: linear-gradient(to bottom, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.4)) repeat scroll 0 0 #444444;
+    border-color: #111111 #0A0A0A #000000;
+    box-shadow: 0 1px rgba(255, 255, 255, 0.1) inset, 0 1px 1px rgba(0, 0, 0, 0.2);
+}
+.dropdown-dark:before {
+    border-bottom-color: #AAAAAA;
+}
+.dropdown-dark:after {
+    border-top-color: #AAAAAA;
+}
+.dropdown-dark .dropdown-select {
+    background: none repeat scroll 0 0 #444444;
+    color: #AAAAAA;
+    text-shadow: 0 1px #000000;
+}
+.dropdown-dark .dropdown-select:focus {
+    color: #CCCCCC;
+}
+.dropdown-dark .dropdown-select > option {
+    background: none repeat scroll 0 0 #444444;
+    text-shadow: 0 1px rgba(0, 0, 0, 0.4);
+}
+        </style>
+    </head>
+    <body>
+    <!-- Responsive navbar-->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <div class="container">
+            <a class="navbar-brand" href="#!">Xin chào {{user.username}}</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+                    <li class="nav-item"><a class="nav-link" href="/admin">Admin</a></li>
+                    <li class="nav-item"><a class="nav-link" href="/">Logout </a></li>
+                  
+                   
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <!-- Page header with logo and tagline-->
+    <header class="py-5 bg-light border-bottom mb-4">
+        <div class="container">
+            <div class="text-center my-5">
+                <h1 class="fw-bolder">Hệ thống điểm danh</h1>
+                <p class="lead mb-0">IoT và Ứng dụng - Nhóm 1</p>
+            </div>
+        </div>
+    </header>    
+    <div class="container" >
+        <div class="row">
+            <div class="col-lg-8">
+
+                <div class="card mb-4">
+                    {% comment %} {% block video %}{% endblock %} {% endcomment %}
+                    <div id = "video_stream">
+                        {% if update == "True" %}
+                        <img class="card-img-top" src="{% url 'video-feed' %}" alt="..." />
+                        {% endif %}
+                    </div>
+                    <div class ="card-body">
+                       <div id="student">Student </div>
+                    </div>
+                </div>
+                <div class="row">
+                   <div class="col-lg-6"></div>                
+                   <div class="col-lg-6"></div>
+                    
+                
+                </div>
+            </div>
+            <div class="col-lg-4">
+                <div class ="card mb-4">
+                        <div class="card-header">
+                            <form method="get" id="select_cam">
+                                {% csrf_token %}
+                                <div class="input-group">
+                                    <select class="form-select" id="myselect" >
+                                        {% if pk == '-1' %}
+                                            <option value="-1" selected="selected">Chọn lớp               </option>
+                                        {% else %}
+                                            <option value="-1">Chọn lớp               </option>
+                                        {% endif %}
+                                        {% if pk == '0' %}
+                                            <option value="0" selected="selected">Lớp thí điểm           </option>
+                                        {% else %}
+                                            <option value="0">Lớp thí điểm           </option>
+                                        {% endif %}
+                                        {% if pk == '1' %}
+                                            <option value="1" selected="selected">Lớp KSTN CNTT K63      </option>
+                                        {% else %}
+                                            <option value="1">Lớp KSTN CNTT K63      </option>
+                                        {% endif %}
+ 
+                                    </select>
+                                    <button class="btn btn-outline-secondary" type="submit">Chọn</button>
+                                </div>
+                            </form>
+                        </div>
+                        <div class="card-body" >
+     
+                          
+                            <div id ='liststudent'>
+                                <ul class="list-group">
+                                    {% for student in ListStudent %}
+                                    <li class="list-group-item">
+                                        {% if student.status == 0 %}
+                                            <input class="form-check-input me-1" type="checkbox" id ={{student.id}} disabled >
+                                        {% else %}
+                                            <input class="form-check-input me-1" type="checkbox" id ={{student.id}} checked disabled >
+                                        {% endif %}
+                                        {{student.name}} {{student.mssv}}
+                                    </li>
+                                    {% endfor %}
+                                </ul>
+                            </div>
+                        </div>
+                    
+                </div>
+                <div>
+                    <div class="btn-group" role="group">
+                        <form method="GET" id="start"> 
+                            <button class="snip1457" type="submit">Start</button>
+                        </form>
+                        <form method="GET" id="stop">                          
+                            <button class="snip1457" type="submit">Stop  </button>
+                        </form>
+                        <form method="GET" id="capture"> 
+                            {% csrf_token %}
+                            <button  class="snip1457" type="submit" >Capture</button>                            
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+ 
+
+    </div>
+
+     <!-- Footer-->
+    <footer class="py-5 bg-dark">
+        <div class="container"><p class="m-0 text-center text-white">Copyright &copy; KSTN-CNTT K63- Group 1</p></div>
+    </footer>
+    <!-- Bootstrap core JS-->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- Core theme JS-->
+    <script src="/static/scripts.js"></script>
+    <script src="https://code.jquery.com/jquery-3.5.1.js" 
+          integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc=" 
+            crossorigin="anonymous"></script>
+  
+    <script type="text/javascript">
+    $('#capture').submit(function(e){
+        e.preventDefault();
+        $.ajax({
+            type:'GET',
+            dataType:'json',
+            url:'{% url "capture" %}',
+            success: function(result){
+                $("#student").html(result.name);
+                $("#liststudent").load(" #liststudent");
+            }
+            })
+        });
+    $('#start').submit(function(e){
+        e.preventDefault();
+        $.ajax({
+            type:'GET',
+            dataType:'json',
+            url:'{% url "connect" %}',
+            success: function(result){
+                {% comment %} alert(result.result) {% endcomment %}
+                location.reload(true); 
+            }
+            })
+        });
+    $('#stop').submit(function(e){
+        e.preventDefault();
+        $.ajax({
+            type:'GET',
+            dataType:'json',
+            url:'{% url "disconnect" %}',
+            success: function(result){
+               {% comment %} alert(result.result) {% endcomment %}
+               location.reload(true); 
+            }
+            })
+        });
+    $('#select_cam').submit(function(e){
+        e.preventDefault();
+        $.ajax({
+            type:'GET',
+            url:'{% url "Init" %}',
+            data:
+            {
+                pk:$('#myselect').val()
+            },
+            success: function(result){
+               {% comment %} alert("Choose Camera "+result.result) {% endcomment %}
+               location.reload(true); 
+            }
+            })
+        });
+    </script>  
+
+</body>
+</html>

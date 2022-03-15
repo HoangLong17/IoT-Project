@@ -1,0 +1,1 @@
+topic_dict = {"1":"esp32/cam_0", "0":"esp32/cam_1"}
