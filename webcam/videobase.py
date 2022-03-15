@@ -8,6 +8,7 @@ import base64
 import cv2
 from datetime import date
 
+broker_address = "192.168.1.68"
 
 class VideoBase():
 	def __init__(self):
@@ -126,7 +127,7 @@ class VideoApp(VideoBase):
 		self.client = mqtt.Client()
 		self.client.on_connect = self.on_connect
 		self.client.on_message = self.on_message
-		self.client.connect("192.168.1.68", 1883)
+		self.client.connect(broker_address, 1883)
 		self.client.loop_start()
 		self.note("connect successfully!")
 		return True 
